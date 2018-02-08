@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<!-- http://www.luxiyalu.com/playground/overlay/ -->
+<!-- https://www.zhihu.com/question/22256539 -->
+<!-- https://segmentfault.com/q/1010000003921576 -->
+<!-- -webkit-overflow-scrolling滑动更流畅 -->
+<head>
+    <title>css的解决方法</title>
+    <style type="text/css">
+    html,
+    body {
+        height: 100%;
+        padding: 0px;
+        margin: 0;
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        right: 0px;	
+        bottom: 0px;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .background-content {
+        height: 100%;
+        overflow: auto;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="overlay">
+        <div class="overlay-content"></div>
+    </div>
+  
+</body>
+
+</html>

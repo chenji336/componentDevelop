@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>scroll&update</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">  
+    <style type="text/css">
+    html,
+    body {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+/*-webkit-overflow-scrolling:touch;*/
+    }
+
+    #dad {
+        /*height: 100%;*/
+        position: fixed;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+        overflow: auto;
+        
+    }
+
+    .container-wrapper {
+        background-color: blue;
+        height: 100%;
+        width: 100%;
+        /*margin-top: 1px;*/
+    }
+    </style>
+</head>
+
+<body id='body'>
+    <div id='dad'>
+    	<!-- <div style='height:100px;width:100%;'></div> -->
+        <div class='container-wrapper' id='container'>
+        	<div style='height:500px;background-color: yellow;overflow: auto'>
+        		<div style='height: 500px'></div>
+        		<div style='height: 500px;background-color: black'></div>
+        	    <div style='height: 500px'></div>
+        		<div style='height: 500px;background-color: black'></div>
+        	</div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    function Handler(e) {
+        var r = R;
+        console.log('start update');
+        // if (R.scrollHeight <= (R.scrollTop + R.clientHeight + 20)) {
+        //     if (isIOS) {
+        //         if (iosHasTouchMove) {
+        //             scope.refreshFunc();
+        //         }
+        //     } else {
+        //         scope.refreshFunc();
+        //     }
+
+        // }
+        // iosHasTouchMove = false;
+    }
+
+    function moveHandler() {
+        // iosHasTouchMove = true;
+    }
+    var R = document.getElementById('dad');
+    // var en = isIOS ? "touchend" : "scroll";
+    var en = "scroll";
+    R.addEventListener(en, Handler, false);
+    // if (isIOS) {
+    //     R.addEventListener("touchmove", moveHandler, false);
+    // }
+    // scope.$on('$destroy', function() {
+    //     R.removeEventListener(en, Handler, false);
+    //     if (isIOS) {
+    //         R.removeEventListener("touchmove", moveHandler, false);
+    //     }
+    // });
+
+// document.getElementById('body').addEventListener('touchstart', function(e){
+//      e.preventDefault();
+//      // e.stopPropagation();
+// }, false);
+ 	// function stopScrolling( touchEvent ) {
+  //       touchEvent.preventDefault();     
+  //   }    
+  //   document.addEventListener( 'touchstart' , stopScrolling , false );    
+    // document.addEventListener( 'touchmove' , stopScrolling , false ); 
+
+    </script>
+</body>
+
+</html>
