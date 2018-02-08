@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>继承</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+	// 使用new Super()继承
+		/*function Super(id,style){
+			this.id=id;
+			this.style=style;
+		}
+
+		Super.prototype.sayHello=function(){
+			console.log('hello:'+this.id);
+		}
+
+		function Sub(id,style,age){
+			Super.call(this,id,style);
+			this.age=age;
+		}
+
+		Sub.prototype=new Super();
+
+		Sub.prototype.saySub=function(){
+			console.log('i am sub');
+		}
+
+		var sub=new Sub('sub_id','sub_style',18);*/
+
+	// 使用赋值prototype继承
+		function Super(id,style){
+			this.id=id;
+			this.style=style;
+		}
+
+		Super.prototype.sayHello=function(){
+			console.log('hello:'+this.id);
+		}
+
+		function Sub(id,style,age){
+			Super.call(this,id,style);
+			this.age=age;
+		}
+
+		function F(){}
+		F.prototype=Super.prototype;
+
+		Sub.prototype=new F();
+		// 这个constructor作用真心不大
+		Sub.prototype.constructor=Sub;
+
+
+		Sub.prototype.saySub=function(){
+			console.log('i am sub');
+		}
+
+		var sub=new Sub('sub_id','sub_style',18);
+
+	</script>
+</body>
+</html>

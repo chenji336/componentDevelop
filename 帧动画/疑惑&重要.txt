@@ -1,0 +1,2 @@
+1.代码地址https://github.com/ustbhuangyi/animation/blob/master/src/animation.js
+2.退出webpack-dev-server 使用ctrl+c

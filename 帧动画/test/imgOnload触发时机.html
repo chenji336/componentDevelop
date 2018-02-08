@@ -1,0 +1,21 @@
+<!-- 总结：onload在最后的时候触发，可以理解成异步 -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>图片触发时机</title>
+</head>
+<body>
+	<img id='rabbit'>
+
+	<script type="text/javascript">
+		var img=document.getElementById('rabbit');
+		console.log('onloading');
+		img.onload=function(){
+			console.log('onloaded');
+		};
+
+		img.src='../image/rabbit-big.png';
+		console.log('src设置完成');
+	</script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+1.下载nodejs
+http://nodejs.cn/download/
+2.全局安装webpack（没有全局安装，在局部安装会出现问题）
+(c)npm install -g webpack 
+3.npm init 生成package.json(如果引用他人的webpack，使用npm install)
+4.局部安装webpack npm install webpack --save-dev(会自动生成webpack.config.js)
+5.全局安装webpack-dev-server cnpm install webpack-dev-server -g(如果安装不了可以先局部安装下)
+	作为一个小型服务器(只有webpack命令执行之后webpack-dev-server才可以使用)
+5.运行webpack  命令
+
+问题：
+npm安装太慢了，使用淘宝镜像，这个使用需要安装一些东西生成
+cnpm:npm install -g cnpm --registry=http://registry.npm.taobao.org

@@ -1,0 +1,23 @@
+.rabbit{
+	position:absolute;
+	width:102px;
+	height:80px;
+	left:100px;
+	background-repeat: no-repeat;
+}
+
+#rabbitRepeat{
+	top:50px;
+}
+
+#rabbitRun{
+	top:200px;
+}
+
+#rabbitLose{
+	top:350px;
+}
+
+#rabbitWin{
+	top:500px;
+}
