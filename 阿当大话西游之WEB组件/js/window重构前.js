@@ -17,7 +17,7 @@ define(['widget','jquery','jqueryUi'],function(widget,$,$Ui){
 
 		this.handlers={};
 	}
-
+	console.log('new widget.Widget():', new widget.Widget())
 	Window.prototype=$.extend({},new widget.Widget(),{//这个用了jquery的继承，js的话可以用Object.create,，其实就是把后面的值赋值给前面的
 		//调整接口形式
 		//好处就是在调用的时候如果我不想传入值还需要一个空字符串占着

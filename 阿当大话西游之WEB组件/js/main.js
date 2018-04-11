@@ -1,7 +1,8 @@
 require.config({
-	paths:{jquery:'jquery-1.7.1.min',
-		   jqueryUi:'jquery-ui.min'	
-		  }
+	paths:{
+		jquery:'jquery-1.7.1.min',
+		jqueryUi:'jquery-ui.min'	
+	}
 });
 
 require(['jquery','window'],function($,w){
